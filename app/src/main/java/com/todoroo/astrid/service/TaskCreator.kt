@@ -141,8 +141,7 @@ class TaskCreator @Inject constructor(
         if (values?.containsKey(HIDE_UNTIL.name) != true) {
             task.hideUntil = task.createHideUntil(
                     preferences.getIntegerFromString(R.string.p_default_hideUntil_key, HIDE_UNTIL_NONE),
-                    0
-            )
+                    0)
         }
         if (tags.isEmpty()) {
             preferences.getStringValue(R.string.p_default_tags)
